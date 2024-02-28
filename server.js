@@ -1,10 +1,14 @@
 const express = require('express');
+const dotenv = require('dotenv');
+dotenv.config({path: 'config.env'});
 
 const app = express();
 
 app.get('/',(req, res) => {
-    res.send('Welcome Node JS');
+    res.send('Welcome Node JS Api');
 })
-app.listen(8000, () => {
-    console.log('App Running...');
+
+const PORT = process.env.PORT;
+app.listen(PORT, () => {
+    console.log('App Running on Port 9000');
 })
