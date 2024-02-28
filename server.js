@@ -8,7 +8,7 @@ app.get('/',(req, res) => {
     res.send('Welcome Node JS Api');
 })
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 9000;
 app.listen(PORT, () => {
     console.log('App Running on Port 9000');
 })
